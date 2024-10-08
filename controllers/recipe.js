@@ -5,6 +5,7 @@ const {
   recipeUpdate,
   recipeDelete,
 } = require("../model/recipe");
+const { recipeSchema } = require("../util/validationSchema");
 const createErrors = require("http-errors");
 
 /* ************************************
@@ -63,6 +64,8 @@ async function createNewRecipe(req, res, next) {
       comments,
     } = req.body;
 
+    const validate = await recipeSchema.validateAsync(req.body);
+
     const newRecipe = await createRecipe(
       title,
       description,
@@ -85,6 +88,9 @@ async function createNewRecipe(req, res, next) {
       .status(201)
       .json({ message: `Recipe created successfully with ID ${newRecipe}` });
   } catch (error) {
+    if (error.isJoi) {
+      error.status = 422;
+    }
     console.error("Error creating recipe:", error);
     return next(error);
   }
@@ -111,6 +117,8 @@ async function updateRecipe(req, res, next) {
       comments,
     } = req.body;
 
+    const validate = await recipeSchema.validateAsync(req.body);
+
     const update = await recipeUpdate(ID, {
       title,
       description,
@@ -133,6 +141,9 @@ async function updateRecipe(req, res, next) {
       .status(200)
       .json({ result: `Recipe with ID ${ID} has been updated successfully` });
   } catch (error) {
+    if (error.isJoi) {
+      error.status = 422;
+    }
     console.error("Error updating recipe:", error);
     return next(error);
   }

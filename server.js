@@ -1,6 +1,6 @@
 const express = require("express");
 const routes = require("./routes/");
-const utilities = require('./util')
+const utilities = require("./util");
 const { errorHandlerToClient, notFoundErrorHandler } = require("./errors");
 const { connectToDB } = require("./model/connectDB");
 
@@ -9,7 +9,6 @@ const port = process.env.PORT;
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true }));
-
 
 /* *****************************************
  * ROUTES
@@ -29,8 +28,3 @@ app.listen(port, () => {
     console.error("Failed to connect to the database:", error);
   });
 });
-
-
-
-
-
