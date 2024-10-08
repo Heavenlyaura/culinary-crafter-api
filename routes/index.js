@@ -16,6 +16,8 @@ router.get("/", (req, res) => {
   res.send("Culinary Crafter API");
 });
 
+router.use("/", require("./swagger"));
+
 /* ************************************
   GET ALL RECIPE ROUTE 
  ************************************** */

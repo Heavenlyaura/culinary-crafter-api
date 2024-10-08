@@ -11,6 +11,7 @@ const createErrors = require("http-errors");
     GET ALL RECIPES
  ************************************** */
 async function getAllRecipes(req, res, next) {
+  //#swagger.tags=["Recipe"]
   try {
     const recipes = await getRecipe();
     res.status(200).json({ results: recipes });
@@ -23,6 +24,8 @@ async function getAllRecipes(req, res, next) {
   GET RECIPE BY ID
  ************************************** */
 async function getRecipeByID(req, res, next) {
+  //#swagger.tags=["Recipe"]
+
   try {
     const ID = req.params.ID;
     const recipe = await recipeByID(ID);
@@ -44,6 +47,7 @@ async function getRecipeByID(req, res, next) {
   POST CREATE NEW RECIPE
  ************************************** */
 async function createNewRecipe(req, res, next) {
+  //#swagger.tags=["Recipe"]
   try {
     const {
       title,
@@ -90,6 +94,7 @@ async function createNewRecipe(req, res, next) {
   PUT UPDATE RECIPE
  ************************************** */
 async function updateRecipe(req, res, next) {
+  //#swagger.tags=["Recipe"]
   try {
     const ID = req.params.ID;
     const {
@@ -137,6 +142,7 @@ async function updateRecipe(req, res, next) {
   DELETE DELETE RECIPE
  ************************************** */
 async function deleteRecipe(req, res, next) {
+  //#swagger.tags=["Recipe"]
   try {
     const ID = req.params.ID;
     const remove = await recipeDelete(ID);
