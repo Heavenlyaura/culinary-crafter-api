@@ -9,9 +9,9 @@
       "email": "goodnessokafor462@gmail.com"
     }
   },
-  "host": "localhost:5000",
+  "host": "culinary-crafter-api.onrender.com/",
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
