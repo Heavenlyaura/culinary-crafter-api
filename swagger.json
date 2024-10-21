@@ -9,11 +9,18 @@
       "email": "goodnessokafor462@gmail.com"
     }
   },
-  "host": "culinary-crafter-api.onrender.com",
+  "host": "localhost:5000",
   "basePath": "/",
-  "schemes": ["https"],
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -27,7 +34,9 @@
     },
     "/recipes": {
       "get": {
-        "tags": ["Recipe"],
+        "tags": [
+          "Recipe"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -36,7 +45,9 @@
         }
       },
       "post": {
-        "tags": ["Recipe"],
+        "tags": [
+          "Recipe"
+        ],
         "description": "",
         "parameters": [
           {
@@ -46,64 +57,37 @@
               "type": "object",
               "properties": {
                 "title": {
-                  "type": "string",
-                  "example": "Chocolate Cake"
+                  "example": "any"
                 },
                 "description": {
-                  "type": "string",
-                  "example": "A delicious chocolate cake recipe."
+                  "example": "any"
                 },
                 "ingredients": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": [
-                    "2 cups flour",
-                    "1 cup sugar",
-                    "1/2 cup cocoa powder"
-                  ]
+                  "example": "any"
                 },
                 "steps": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": ["Mix ingredients", "Bake for 30 minutes"]
+                  "example": "any"
                 },
                 "category": {
-                  "type": "string",
-                  "example": "Dessert"
+                  "example": "any"
                 },
                 "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": ["cake", "chocolate", "dessert"]
+                  "example": "any"
                 },
                 "prepTime": {
-                  "type": "integer",
-                  "example": 15
+                  "example": "any"
                 },
                 "cookTime": {
-                  "type": "integer",
-                  "example": 30
+                  "example": "any"
                 },
                 "servings": {
-                  "type": "integer",
-                  "example": 8
+                  "example": "any"
                 },
                 "author": {
-                  "type": "string",
-                  "example": "Goodness Okafor"
+                  "example": "any"
                 },
                 "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": ["This recipe is amazing!", "My family loved it."]
+                  "example": "any"
                 }
               }
             }
@@ -121,7 +105,9 @@
     },
     "/recipes/{ID}": {
       "get": {
-        "tags": ["Recipe"],
+        "tags": [
+          "Recipe"
+        ],
         "description": "",
         "parameters": [
           {
@@ -140,7 +126,9 @@
     },
     "/update/{ID}": {
       "put": {
-        "tags": ["Recipe"],
+        "tags": [
+          "Recipe"
+        ],
         "description": "",
         "parameters": [
           {
@@ -156,64 +144,37 @@
               "type": "object",
               "properties": {
                 "title": {
-                  "type": "string",
-                  "example": "Chocolate Cake"
+                  "example": "any"
                 },
                 "description": {
-                  "type": "string",
-                  "example": "A delicious chocolate cake recipe."
+                  "example": "any"
                 },
                 "ingredients": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": [
-                    "2 cups flour",
-                    "1 cup sugar",
-                    "1/2 cup cocoa powder"
-                  ]
+                  "example": "any"
                 },
                 "steps": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": ["Mix ingredients", "Bake for 30 minutes"]
+                  "example": "any"
                 },
                 "category": {
-                  "type": "string",
-                  "example": "Dessert"
+                  "example": "any"
                 },
                 "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": ["cake", "chocolate", "dessert"]
+                  "example": "any"
                 },
                 "prepTime": {
-                  "type": "integer",
-                  "example": 15
+                  "example": "any"
                 },
                 "cookTime": {
-                  "type": "integer",
-                  "example": 3
+                  "example": "any"
                 },
                 "servings": {
-                  "type": "integer",
-                  "example": 8
+                  "example": "any"
                 },
                 "author": {
-                  "type": "string",
-                  "example": "Goodness Okafor"
+                  "example": "any"
                 },
                 "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": ["This recipe is amazing!", "My family loved it."]
+                  "example": "any"
                 }
               }
             }
@@ -231,7 +192,9 @@
     },
     "/delete/{ID}": {
       "delete": {
-        "tags": ["Recipe"],
+        "tags": [
+          "Recipe"
+        ],
         "description": "",
         "parameters": [
           {
@@ -248,7 +211,73 @@
         }
       }
     },
+    "/profile": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/google": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/google/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/github": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/github/callback": {
       "get": {
         "description": "",
         "responses": {

@@ -6,7 +6,9 @@ function notFoundErrorHandler(req, res, next) {
 
 function errorHandlerToClient(err, req, res, next) {
   const status = err.status || 500;
-  const message = status === 500 ? "An internal server error occurred." : err.message;
+  console.log(err.message);
+  const message =
+    status === 500 ? "An internal server error occurred." : err.message;
   res.status(status).json({
     error: {
       status,
