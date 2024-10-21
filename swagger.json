@@ -95,7 +95,7 @@
     "/recipes/{ID}": {
       "get": {
         "tags": ["Recipe"],
-        "description": "",
+        "description": "Add recipies in the database. Authentication is required",
         "parameters": [
           {
             "name": "ID",
@@ -114,7 +114,7 @@
     "/update/{ID}": {
       "put": {
         "tags": ["Recipe"],
-        "description": "",
+        "description": "Update recipies in the database. Authentication is required",
         "parameters": [
           {
             "name": "ID",
@@ -178,7 +178,7 @@
     "/delete/{ID}": {
       "delete": {
         "tags": ["Recipe"],
-        "description": "",
+        "description": "Delete a recipie from the database, Authentication is required",
         "parameters": [
           {
             "name": "ID",
