@@ -9,7 +9,7 @@
       "email": "goodnessokafor462@gmail.com"
     }
   },
-  "host": "https://culinary-crafter-api.onrender.com",
+  "host": "culinary-crafter-api.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
   "consumes": ["application/json"],
