@@ -22,8 +22,8 @@ router.get("/", (req, res) => {
   } else {
     res.send({
       message: "Welcome to the Recipe API",
-      loginGithub: "http://localhost:5000/auth/github",
-      loginGoogle: "http://localhost:5000/auth/google",
+      loginGithub: "https://culinary-crafter-api.onrender.com/auth/github",
+      loginGoogle: "https://culinary-crafter-api.onrender.com/auth/google",
     });
   }
 });

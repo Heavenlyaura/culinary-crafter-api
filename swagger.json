@@ -9,18 +9,11 @@
       "email": "goodnessokafor462@gmail.com"
     }
   },
-  "host": "localhost:5000",
+  "host": "https://culinary-crafter-api.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "http",
-    "https"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "paths": {
     "/": {
       "get": {
@@ -34,9 +27,7 @@
     },
     "/recipes": {
       "get": {
-        "tags": [
-          "Recipe"
-        ],
+        "tags": ["Recipe"],
         "description": "",
         "responses": {
           "200": {
@@ -45,9 +36,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Recipe"
-        ],
+        "tags": ["Recipe"],
         "description": "",
         "parameters": [
           {
@@ -105,9 +94,7 @@
     },
     "/recipes/{ID}": {
       "get": {
-        "tags": [
-          "Recipe"
-        ],
+        "tags": ["Recipe"],
         "description": "",
         "parameters": [
           {
@@ -126,9 +113,7 @@
     },
     "/update/{ID}": {
       "put": {
-        "tags": [
-          "Recipe"
-        ],
+        "tags": ["Recipe"],
         "description": "",
         "parameters": [
           {
@@ -192,9 +177,7 @@
     },
     "/delete/{ID}": {
       "delete": {
-        "tags": [
-          "Recipe"
-        ],
+        "tags": ["Recipe"],
         "description": "",
         "parameters": [
           {
@@ -213,9 +196,7 @@
     },
     "/profile": {
       "get": {
-        "tags": [
-          "user"
-        ],
+        "tags": ["user"],
         "description": "",
         "responses": {
           "200": {
