@@ -33,12 +33,12 @@ router.use("/", require("./swagger"));
 /* ************************************
   GET ALL RECIPE ROUTE 
  ************************************** */
-router.get("/recipes", getAllRecipes);
+router.get("/recipes", ensureAuth, getAllRecipes);
 
 /* ************************************
   GET RECIPE BY ID 
  ************************************** */
-router.get("/recipes/:ID", getRecipeByID);
+router.get("/recipes/:ID", ensureAuth, getRecipeByID);
 
 /* ************************************
   POST CREATE NEW RECIPE 
